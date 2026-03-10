@@ -1,3 +1,0 @@
-/home/tasdyque/chess-engine/build/CMakeFiles/CHESS-ENGINE.dir
-/home/tasdyque/chess-engine/build/CMakeFiles/edit_cache.dir
-/home/tasdyque/chess-engine/build/CMakeFiles/rebuild_cache.dir
