@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/tasdyque/chess-engine/build",
+  "command": "/usr/bin/c++   -g -std=gnu++20 -o CMakeFiles/CHESS-ENGINE.dir/src/main.cpp.o -c /home/tasdyque/chess-engine/src/main.cpp",
+  "file": "/home/tasdyque/chess-engine/src/main.cpp",
+  "output": "CMakeFiles/CHESS-ENGINE.dir/src/main.cpp.o"
+}
+]
