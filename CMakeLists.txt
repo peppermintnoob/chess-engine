@@ -4,4 +4,5 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(CHESS-ENGINE)
-add_executable(CHESS-ENGINE src/main.cpp)
+file(GLOB_RECURSE SOURCE_FILES src/*.cpp)
+add_executable(CHESS-ENGINE ${SOURCE_FILES})
