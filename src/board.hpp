@@ -17,6 +17,7 @@ extern bitboard moves[Piece_num];
 extern bitboard no_pieces;
 extern bitboard all_pieces; 
 extern fast_number half_turns; 
+extern Color turn;
 
 constexpr value how_many(Piece);
 constexpr value how_many(Color, PieceType);
