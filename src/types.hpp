@@ -10,7 +10,7 @@
 
 
 using fast_number = int_fast32_t; //For representing positions and scores.
-using value = uint8_t; //General small number for castling rights.
+using value = uint8_t; //General small number for www rights.
 
 enum PieceType {
     No_Piece_Type, //If there is no piece. Index 0
@@ -45,10 +45,12 @@ constexpr fast_number queen_value = 94; //A queen is worth 94 points because it 
 constexpr fast_number king_value = std::numeric_limits<fast_number>::max(); //A king is worth the maximum amount of points.
 
 //The castling rights will be read into an int to keep track of
-constexpr value White_Queenside_Castle = 1; //0001
-constexpr value White_Kingside_Castle = 2;  //0010
-constexpr value Black_Queenside_Castle = 4; //0100
-constexpr value Black_Kingside_Castle = 8;  //1000
+enum castling_rights {
+    White_Kingside = 1,
+    White_Queenside = 2,
+    Black_Kingside = 4,
+    Black_Queenside = 8,
+};
 //Each bit represents the castling right of that side. Must become 0000 if rights are taken.
 
 //For this black pieces are worth negative so it becomes easier to implement MiniMax
@@ -67,12 +69,12 @@ constexpr fast_number Eval[Piece_num] {
 enum File {
     A, B, C, D, E, F, G, H
 };
-//Ranks represent rows
+//Ranks represent roews
 enum Rank {
     R1, R2, R3, R4, R5, R6, R7, R8
 };
 //Files + Rank to represent the entire Board
-enum Squares {
+enum Square {
     A1, B1, C1, D1, E1, F1, G1, H1,
     A2, B2, C2, D2, E2, F2, G2, H2,
     A3, B3, C3, D3, E3, F3, G3, H3,
@@ -81,5 +83,6 @@ enum Squares {
     A6, B6, C6, D6, E6, F6, G6, H6,
     A7, B7, C7, D7, E7, F7, G7, H7,
     A8, B8, C8, D8, E8, F8, G8, H8,
+    Squares_num, No_SQ
 };
 #endif//TYPES_HPP
